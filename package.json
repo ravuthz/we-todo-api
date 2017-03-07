@@ -1,0 +1,38 @@
+{
+  "name": "todo",
+  "description": "tel something about your project here",
+  "version": "1.0.0",
+  "private": true,
+  "main": "./app.js",
+  "scripts": {
+    "dev": "node app.js --dev",
+    "verbose": "node app.js --prod",
+    "prod": "node app.js --prod",
+    "start": "node app.js",
+    "test": "NODE_ENV=test LOG_LV=info ./node_modules/.bin/mocha test/bootstrap.js test/**/*.test.js",
+    "coverage": "NODE_ENV=test LOG_LV=info node_modules/.bin/istanbul cover node_modules/.bin/_mocha -- -u exports -R spec test/bootstrap.js test/**/*.test.js"
+  },
+  "dependencies": {
+    "async": "^2.1.5",
+    "express-mysql-session": "^1.2.0",
+    "lodash": "^4.17.4",
+    "mysql": "^2.13.0",
+    "we-core": "^1.12.3",
+    "we-plugin-auth": "^1.2.1",
+    "we-plugin-user": "^1.1.6"
+  },
+  "devDependencies": {
+    "istanbul": "^0.4.5",
+    "mocha": "^3.2.0",
+    "rimraf": "^2.6.1",
+    "sinon": "^1.17.7",
+    "supertest": "^3.0.0",
+    "we-test-tools": "^0.3.19"
+  },
+  "wejs": {
+    "plugins": {
+      "we-plugin-user": true,
+      "we-plugin-auth": true
+    }
+  }
+}
