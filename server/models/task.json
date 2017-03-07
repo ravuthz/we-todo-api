@@ -1,0 +1,18 @@
+{
+  "attributes": {
+    "name": {
+      "type": "STRING"
+    },
+    "done": {
+      "type": "BOOLEAN"
+    }
+    
+  },
+  "associations": {
+    
+  },
+  "hooks": {
+    "afterCreate": []
+  }
+}
+
